@@ -1,12 +1,24 @@
 <template>
   <header class="app-header">
-      Шапка
-      <slot/>
+      <Container>
+        <slot/>
+      </Container>
   </header>
 </template>
 
 <script>
-export default {
+import Container from './Container'
 
+export default {
+  components: {
+    Container
+  }
 }
 </script>
+
+<style lang="scss" scoped>
+  .app-header {
+    width: 100%;
+    background-color: var(--dark);
+  }
+</style>

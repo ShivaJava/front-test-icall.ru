@@ -1,0 +1,17 @@
+$primary: #3C59F0;
+$dark: #151419;
+$gray: #626262;
+$light: #ffffff;
+
+$colors: (
+    'primary':    $primary,
+    'dark':       $dark,
+    'gray':       $gray,
+    'light':      $light
+);
+
+:root {
+    @each $name, $color in $colors {
+        --#{$name}: #{$color};
+    }
+}
